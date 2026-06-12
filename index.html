@@ -6,7 +6,7 @@
     <title>WildTrkr | Smarter Field Monitoring</title>
     <meta
       name="description"
-      content="Field monitoring software for trap deployment, activation alerts, operator workflows and capture reporting."
+      content="WildTrkr public platform overview for councils and field teams, including supported devices, use cases, pricing, and contact."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,17 +21,20 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="WildTrkr home">
+        <a class="brand" href="/" aria-label="WildTrkr home">
           <span class="brand-mark" aria-hidden="true">WT</span>
           <span class="brand-text">WildTrkr</span>
         </a>
         <nav aria-label="Primary">
           <ul class="nav-list">
-            <li><a href="#how-it-works">How it works</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#who-its-for">Who it&rsquo;s for</a></li>
-            <li><a href="#request-demo">Request demo</a></li>
-            <li><a class="login-link" href="https://app.wildtrkr.com">Login</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="/devices">Devices</a></li>
+            <li><a href="#use-cases">Use Cases</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a class="login-link" href="https://app.wildtrkr.com/login">Login</a></li>
           </ul>
         </nav>
       </div>
@@ -44,90 +47,195 @@
             <p class="kicker">WildTrkr</p>
             <h1>Smarter Field Monitoring</h1>
             <p class="hero-copy">
-              WildTrkr is field monitoring software for trap deployment, activation alerts, operator workflows,
-              and capture reporting. Built for practical, reliable operations in Australian field conditions.
+              WildTrkr is field monitoring software for trap deployment, activation alerts, operator
+              workflows and capture reporting - built for practical, reliable operations in Australian
+              field conditions.
             </p>
             <div class="cta-row">
-              <a class="button button-primary" href="#request-demo">Request a Demo</a>
-              <a class="button button-secondary" href="https://app.wildtrkr.com">Login</a>
+              <a class="button button-primary" href="#contact">Request a Demo</a>
+              <a class="button button-secondary" href="/devices">View Devices</a>
             </div>
           </div>
-          <aside class="hero-panel" aria-label="Platform snapshot">
-            <h2>Operational visibility at a glance</h2>
-            <ul>
-              <li>Live map + list view for active trap networks</li>
-              <li>Status tracking from deployment to trigger response</li>
-              <li>Structured reporting for council and contractor teams</li>
-            </ul>
+          <aside class="hero-panel hero-panel-product" aria-label="Platform snapshot mockup">
+            <p class="card-kicker">Platform snapshot</p>
+            <h2>Active trap network</h2>
+            <div class="status-grid" role="list" aria-label="Status legend">
+              <div class="status-chip status-blue" role="listitem">Blue: Not deployed</div>
+              <div class="status-chip status-green" role="listitem">Green: Set / active</div>
+              <div class="status-chip status-yellow" role="listitem">Yellow: Missed check-in</div>
+              <div class="status-chip status-red" role="listitem">Red: Triggered</div>
+            </div>
+            <div class="mockup-list" aria-label="Workflow highlights">
+              <p><strong>Email activation alerts</strong><span>Send to assigned teams</span></p>
+              <p><strong>Capture outcome reporting</strong><span>Maintain cleaner field records</span></p>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section id="how-it-works" class="section">
+      <section id="platform" class="section">
         <div class="container">
           <h2>How It Works</h2>
-          <ol class="step-grid">
-            <li>Set and assign traps</li>
-            <li>Monitor trap status</li>
-            <li>Receive activation alerts</li>
-            <li>Respond in the field</li>
-            <li>Record capture outcomes</li>
-            <li>Export activity reports</li>
-          </ol>
+          <p class="section-intro">
+            A straightforward six-step workflow helps field teams run practical monitoring programs with
+            clearer visibility and faster response.
+          </p>
+          <div class="step-grid" role="list">
+            <article class="step-card" role="listitem">
+              <p class="step-number">Step 1</p>
+              <h3>Set and assign traps</h3>
+              <p>Allocate active devices and ownership to the right operators from day one.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <p class="step-number">Step 2</p>
+              <h3>Monitor trap status</h3>
+              <p>Use live status updates across your network to see what needs attention.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <p class="step-number">Step 3</p>
+              <h3>Receive activation alerts</h3>
+              <p>Get clear email notifications when triggered events require field response.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <p class="step-number">Step 4</p>
+              <h3>Respond in the field</h3>
+              <p>Coordinate tasks with assigned operators to keep response workflows consistent.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <p class="step-number">Step 5</p>
+              <h3>Record capture outcomes</h3>
+              <p>Log outcomes and notes in one place to support cleaner records and oversight.</p>
+            </article>
+            <article class="step-card" role="listitem">
+              <p class="step-number">Step 6</p>
+              <h3>Export activity reports</h3>
+              <p>Review activity outputs to support council reporting and program decisions.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="features" class="section section-soft">
+      <section class="section section-soft" aria-labelledby="platform-features-title">
         <div class="container">
-          <h2>Features</h2>
-          <div class="feature-grid">
+          <h2 id="platform-features-title">Platform Features</h2>
+          <p class="section-intro">
+            WildTrkr combines telemetry, operator workflows and reporting in one practical platform for
+            councils and field teams.
+          </p>
+          <div class="feature-grid feature-grid-two">
             <article>
               <h3>Live Map + List view</h3>
-              <p>Track deployments spatially and operationally in one workflow.</p>
+              <p>See network status clearly across locations with simple list and map context.</p>
             </article>
             <article>
-              <h3>Device status workflow</h3>
-              <p>Not deployed, Active, Missed check-in, and Triggered states for clear action.</p>
+              <h3>Status-based workflow</h3>
+              <p>Work from clear status signals to prioritise response and routine checks.</p>
             </article>
             <article>
               <h3>Operator assignment</h3>
-              <p>Allocate responsibility by area, contractor, or operational team.</p>
+              <p>Assign monitoring responsibility to teams and individuals by deployment area.</p>
             </article>
             <article>
-              <h3>Email alerts</h3>
-              <p>Receive fast notifications when traps trigger or require attention.</p>
+              <h3>Email activation alerts</h3>
+              <p>Route trigger notifications to nominated recipients for faster field action.</p>
             </article>
             <article>
               <h3>Capture outcome logging</h3>
-              <p>Record field outcomes consistently for audit and performance tracking.</p>
+              <p>Maintain field records with structured outcome entries and inspection notes.</p>
             </article>
             <article>
-              <h3>Trial Activity reporting</h3>
-              <p>Export practical reports for review, planning, and program governance.</p>
+              <h3>Trial activity reporting</h3>
+              <p>Summarise early-stage and operational activity to support governance reviews.</p>
             </article>
           </div>
-          <p class="section-note">Built for council and contractor workflows.</p>
         </div>
       </section>
 
-      <section id="who-its-for" class="section">
+      <section id="use-cases" class="section section-soft">
         <div class="container">
-          <h2>Who It&rsquo;s For</h2>
-          <ul class="audience-list">
-            <li>Councils</li>
-            <li>Biosecurity teams</li>
-            <li>Land managers</li>
-            <li>Environmental contractors</li>
-            <li>Invasive species programs</li>
-          </ul>
+          <h2>Who It's For</h2>
+          <div class="feature-grid">
+            <article>
+              <h3>Local councils</h3>
+              <p>Coordinate multi-site monitoring programs with consistent visibility and governance-ready records.</p>
+            </article>
+            <article>
+              <h3>Biosecurity teams</h3>
+              <p>Track deployment status and field outcomes in practical day-to-day operations.</p>
+            </article>
+            <article>
+              <h3>Environmental contractors</h3>
+              <p>Manage assigned regions with clear alerts, accountability and reporting support.</p>
+            </article>
+            <article>
+              <h3>Land management teams</h3>
+              <p>Maintain visibility across hard-to-service locations and distributed field assets.</p>
+            </article>
+            <article>
+              <h3>Field operators</h3>
+              <p>Follow practical workflows for activation response, inspections and outcome logging.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="request-demo" class="section section-soft">
+      <section class="section" id="devices-teaser">
+        <div class="container teaser-panel">
+          <div>
+            <p class="kicker">Devices</p>
+            <h2>Supported devices for practical deployment</h2>
+            <p class="section-intro">
+              WildTrkr supports cellular monitoring devices today and is assessing satellite monitoring for
+              future remote-area deployments.
+            </p>
+          </div>
+          <a class="button button-primary" href="/devices">View Devices</a>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
         <div class="container">
-          <h2>Request Demo / Contact</h2>
+          <h2>Pricing</h2>
+          <p class="section-intro">
+            WildTrkr pricing is separated into hardware and platform access so procurement teams can plan clearly.
+          </p>
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <h3>Hardware</h3>
+              <p class="price-line">Cellular device hardware: from $250 per device</p>
+              <p>Final pricing depends on device configuration and volume.</p>
+            </article>
+            <article class="pricing-card">
+              <h3>Platform Subscription</h3>
+              <p class="price-line">Standard platform subscription: from $15 per device / month</p>
+              <p>Premium features: from $20 per device / month where applicable.</p>
+            </article>
+            <article class="pricing-card">
+              <h3>Satellite Monitoring</h3>
+              <p class="price-line">Future pricing to be confirmed</p>
+              <p>Satellite monitoring is under evaluation for future deployments.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-soft">
+        <div class="container">
+          <h2>About</h2>
+          <p class="section-intro">
+            WildTrkr is built from real field tracking experience, with a focus on practical trap
+            monitoring, faster response, cleaner records and better visibility for teams managing
+            field programs.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
           <p class="form-intro">
-            For V1, this form is mailto-based and can be connected to a backend workflow later.
+            Tell us about your field program and we'll contact you to discuss devices, platform
+            access and a practical trial.
           </p>
           <form
             class="contact-form"
@@ -147,6 +255,9 @@
             <label for="phone">Phone</label>
             <input id="phone" name="Phone" type="tel" />
 
+            <label for="device-count">Number of devices/traps</label>
+            <input id="device-count" name="Number of devices or traps" type="text" />
+
             <label for="message">Message</label>
             <textarea id="message" name="Message" rows="5" required></textarea>
 
@@ -161,11 +272,12 @@
         <div>
           <p class="footer-brand">WildTrkr</p>
           <p>Smarter Field Monitoring</p>
-          <p>Everyday Tracking</p>
+          <p>Built for practical Australian field operations.</p>
         </div>
         <div>
           <p><a href="mailto:contact@wildtrkr.com">contact@wildtrkr.com</a></p>
-          <p><a href="https://app.wildtrkr.com">Login</a></p>
+          <p><a href="/devices">Devices</a></p>
+          <p><a href="https://app.wildtrkr.com/login">Login</a></p>
         </div>
       </div>
     </footer>
