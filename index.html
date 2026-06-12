@@ -55,18 +55,48 @@
               <a class="button button-secondary" href="/devices">View Devices</a>
             </div>
           </div>
-          <aside class="hero-panel hero-panel-product" aria-label="Platform snapshot mockup">
-            <p class="card-kicker">Platform snapshot</p>
-            <h2>Active trap network</h2>
-            <div class="status-grid" role="list" aria-label="Status legend">
-              <div class="status-chip status-blue" role="listitem">Blue: Not deployed</div>
-              <div class="status-chip status-green" role="listitem">Green: Set / active</div>
-              <div class="status-chip status-yellow" role="listitem">Yellow: Missed check-in</div>
-              <div class="status-chip status-red" role="listitem">Red: Triggered</div>
-            </div>
-            <div class="mockup-list" aria-label="Workflow highlights">
-              <p><strong>Email activation alerts</strong><span>Send to assigned teams</span></p>
-              <p><strong>Capture outcome reporting</strong><span>Maintain cleaner field records</span></p>
+          <aside class="hero-panel hero-panel-product" aria-label="Field status snapshot">
+            <p class="card-kicker">Field status snapshot</p>
+            <h2>Trap network overview</h2>
+            <ul class="status-row-list" role="list" aria-label="Device status types">
+              <li class="status-row status-row-blue">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>Not deployed</strong>
+                  <span>Devices ready to be assigned and set in the field.</span>
+                </div>
+              </li>
+              <li class="status-row status-row-green">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>Set / active</strong>
+                  <span>Trap is deployed and monitoring normally.</span>
+                </div>
+              </li>
+              <li class="status-row status-row-yellow">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>Missed check-in</strong>
+                  <span>Device requires attention after a missed heartbeat.</span>
+                </div>
+              </li>
+              <li class="status-row status-row-red">
+                <span class="status-dot"></span>
+                <div>
+                  <strong>Triggered</strong>
+                  <span>Activation alert sent for field response.</span>
+                </div>
+              </li>
+            </ul>
+            <div class="snapshot-workflow">
+              <div class="snapshot-workflow-item">
+                <strong>Alert workflow</strong>
+                <span>Assigned operators and managers receive activation notifications.</span>
+              </div>
+              <div class="snapshot-workflow-item">
+                <strong>Outcome records</strong>
+                <span>Capture results are logged for reporting and review.</span>
+              </div>
             </div>
           </aside>
         </div>

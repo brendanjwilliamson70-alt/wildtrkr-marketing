@@ -287,25 +287,101 @@ h1 {
   color: var(--red-700);
 }
 
-.mockup-list {
+.status-row-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
-  gap: 0.55rem;
+  gap: 0.45rem;
 }
 
-.mockup-list p {
-  margin: 0;
+.status-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  border-radius: 12px;
+  padding: 0.62rem 0.72rem;
+  border: 1px solid transparent;
+}
+
+.status-row div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.status-row strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.status-row span {
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.status-dot {
+  flex-shrink: 0;
+  width: 0.62rem;
+  height: 0.62rem;
+  border-radius: 50%;
+  margin-top: 0.28rem;
+}
+
+.status-row-blue {
+  background: var(--blue-200);
+  border-color: #b8d6ea;
+  color: var(--blue-700);
+}
+.status-row-blue .status-dot { background: var(--blue-700); }
+
+.status-row-green {
+  background: var(--green-200);
+  border-color: #b9dfcb;
+  color: var(--green-700);
+}
+.status-row-green .status-dot { background: var(--green-700); }
+
+.status-row-yellow {
+  background: var(--yellow-200);
+  border-color: #ead8a9;
+  color: var(--yellow-700);
+}
+.status-row-yellow .status-dot { background: var(--yellow-700); }
+
+.status-row-red {
+  background: var(--red-200);
+  border-color: #e5b9b9;
+  color: var(--red-700);
+}
+.status-row-red .status-dot { background: var(--red-700); }
+
+.snapshot-workflow {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
+}
+
+.snapshot-workflow-item {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--surface-card);
-  padding: 0.72rem 0.78rem;
+  padding: 0.62rem 0.72rem;
   display: flex;
   flex-direction: column;
-  gap: 0.12rem;
+  gap: 0.1rem;
 }
 
-.mockup-list span {
-  color: var(--ink-500);
+.snapshot-workflow-item strong {
   font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ink-900);
+}
+
+.snapshot-workflow-item span {
+  color: var(--ink-500);
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .section {
