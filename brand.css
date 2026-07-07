@@ -1,0 +1,36 @@
+.brand-wordmark {
+  gap: 0;
+}
+
+.brand-logo {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name {
+  display: inline-flex;
+  font-size: 1.28rem;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.brand-name-wild {
+  color: #2f7a57;
+}
+
+.brand-name-trkr {
+  color: #d98a2e;
+}
+
+.brand-tagline {
+  margin-top: 0.28rem;
+  color: #4f5d58;
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
