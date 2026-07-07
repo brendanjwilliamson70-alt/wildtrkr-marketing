@@ -392,6 +392,15 @@
 }
 
 @media (max-width: 620px) {
+  .brand-name {
+    font-size: 1.12rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.48rem;
+    letter-spacing: 0.14em;
+  }
+
   .sales-hero {
     padding-top: 3.4rem;
   }
