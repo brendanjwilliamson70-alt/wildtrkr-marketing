@@ -28,7 +28,7 @@
 .hero-real-platform .container {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.76fr) minmax(430px, 1.24fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(430px, 1.18fr);
   gap: clamp(1.5rem, 4vw, 3.4rem);
   align-items: center;
   width: min(1240px, 92vw);
@@ -60,18 +60,18 @@
 .platform-screenshot-card {
   position: relative;
   margin: 0;
-  min-height: 540px;
+  min-height: 455px;
   border: 1px solid rgba(216, 222, 214, 0.95);
-  border-radius: 34px;
+  border-radius: 30px;
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(238, 245, 240, 0.82)),
     #fff;
-  box-shadow: 0 34px 80px rgba(23, 40, 36, 0.15);
+  box-shadow: 0 28px 66px rgba(23, 40, 36, 0.14);
   overflow: hidden;
 }
 
 .hero-maplist-card {
-  transform: rotate(-0.6deg);
+  transform: none;
 }
 
 .hero-maplist-card::before {
@@ -98,8 +98,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(251, 250, 245, 0.26), transparent 16%, transparent 82%, rgba(251, 250, 245, 0.32)),
-    linear-gradient(180deg, transparent 74%, rgba(251, 250, 245, 0.38));
+    linear-gradient(90deg, rgba(251, 250, 245, 0.08), transparent 10%, transparent 92%, rgba(251, 250, 245, 0.14)),
+    linear-gradient(180deg, transparent 86%, rgba(251, 250, 245, 0.16));
 }
 
 .screenshot-crop {
@@ -113,31 +113,18 @@
   top: 50%;
   left: 50%;
   display: block;
-  width: 154%;
+  width: 132%;
   max-width: none;
   height: auto;
-  filter: drop-shadow(0 28px 42px rgba(23, 40, 36, 0.12));
+  filter: drop-shadow(0 18px 30px rgba(23, 40, 36, 0.10));
 }
 
 .crop-maplist img {
-  transform: translate(-31%, -50%) rotate(0.6deg);
+  transform: translate(-61%, -50%);
 }
 
 .platform-screenshot-card figcaption {
-  position: absolute;
-  z-index: 4;
-  right: 1rem;
-  bottom: 1rem;
-  max-width: 340px;
-  border: 1px solid rgba(216, 222, 214, 0.95);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--ink-500);
-  font-size: 0.76rem;
-  font-weight: 900;
-  line-height: 1.25;
-  padding: 0.48rem 0.72rem;
-  text-align: right;
+  display: none;
 }
 
 .product-section {
@@ -261,11 +248,11 @@
 }
 
 .screenshot-proof-screen .screenshot-crop img {
-  width: 162%;
+  width: 132%;
 }
 
 .crop-dashboard img {
-  transform: translate(-70%, -50%);
+  transform: translate(-43%, -50%);
 }
 
 .proof-card-stack {
@@ -487,10 +474,6 @@
     border-radius: 24px;
   }
 
-  .hero-maplist-card {
-    transform: none;
-  }
-
   .hero-maplist-card::before {
     top: 0.72rem;
     left: 0.72rem;
@@ -498,19 +481,11 @@
   }
 
   .screenshot-crop img {
-    width: 178%;
+    width: 154%;
   }
 
   .crop-maplist img {
-    transform: translate(-34%, -50%);
-  }
-
-  .platform-screenshot-card figcaption {
-    left: 0.72rem;
-    right: 0.72rem;
-    bottom: 0.72rem;
-    max-width: none;
-    text-align: center;
+    transform: translate(-59%, -50%);
   }
 
   .screenshot-proof-screen .screenshot-crop {
@@ -519,11 +494,11 @@
   }
 
   .screenshot-proof-screen .screenshot-crop img {
-    width: 190%;
+    width: 168%;
   }
 
   .crop-dashboard img {
-    transform: translate(-72%, -50%);
+    transform: translate(-45%, -50%);
   }
 
   .trial-items,
