@@ -118,11 +118,13 @@
   font-size: clamp(2rem, 4.6vw, 4.1rem);
   letter-spacing: -0.05em;
   line-height: 1.04;
+  margin-bottom: 0.65rem;
 }
 
 .section-copy p {
   color: var(--ink-700);
   font-size: 1.1rem;
+  margin-top: 0;
   max-width: 670px;
 }
 
@@ -142,6 +144,89 @@
   box-shadow: 0 12px 24px rgba(23, 40, 36, 0.06);
   font-weight: 900;
   padding: 0.72rem 0.9rem;
+}
+
+.action-section .feature-screen-grid {
+  grid-template-columns: minmax(340px, 0.7fr) minmax(660px, 1.3fr);
+}
+
+.action-copy h2 {
+  margin-bottom: 0.45rem;
+}
+
+.action-copy p {
+  margin-bottom: 0.95rem;
+}
+
+.action-card-list {
+  display: grid;
+  gap: 0.62rem;
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
+.action-card {
+  border: 1px solid transparent;
+  border-left-width: 6px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(23, 40, 36, 0.06);
+  display: grid;
+  gap: 0.18rem;
+  padding: 0.78rem 0.9rem;
+}
+
+.action-card strong {
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.action-card span {
+  color: var(--ink-900);
+  font-size: 1.02rem;
+  font-weight: 900;
+  line-height: 1.22;
+}
+
+.action-red {
+  background: #f6dada;
+  border-color: #f35f7b;
+  color: #7d2f2f;
+}
+
+.action-yellow {
+  background: #f6ebcf;
+  border-color: #d98a2e;
+  color: #75571c;
+}
+
+.action-green {
+  background: #dbf1e6;
+  border-color: #24c264;
+  color: #2f6a4d;
+}
+
+.action-blue {
+  background: #d7eaf6;
+  border-color: #3b82f6;
+  color: #295d7a;
+}
+
+.workflow-image-card {
+  border: 1px solid rgba(216, 222, 214, 0.95);
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0 26px 70px rgba(23, 40, 36, 0.12);
+  margin: 0;
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+.workflow-image-card .section-proof-image {
+  border-radius: 22px;
 }
 
 .app-screen {
@@ -392,6 +477,7 @@
 
 @media (max-width: 1050px) {
   .hero-real-platform .container,
+  .action-section .feature-screen-grid,
   .feature-screen-grid,
   .feature-screen-grid.reverse,
   .trial-panel-clean,
@@ -422,7 +508,8 @@
     font-size: 2.55rem;
   }
 
-  .platform-screenshot-card {
+  .platform-screenshot-card,
+  .workflow-image-card {
     border-radius: 24px;
     padding: 0.4rem;
   }
@@ -431,7 +518,8 @@
     transform: none;
   }
 
-  .hero-proof-image {
+  .hero-proof-image,
+  .workflow-image-card .section-proof-image {
     border-radius: 18px;
   }
 
