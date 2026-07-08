@@ -28,7 +28,7 @@
 .hero-real-platform .container {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(430px, 1.18fr);
+  grid-template-columns: minmax(0, 0.78fr) minmax(460px, 1.22fr);
   gap: clamp(1.5rem, 4vw, 3.4rem);
   align-items: center;
   width: min(1240px, 92vw);
@@ -58,73 +58,36 @@
 }
 
 .platform-screenshot-card {
-  position: relative;
   margin: 0;
-  min-height: 455px;
   border: 1px solid rgba(216, 222, 214, 0.95);
-  border-radius: 30px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(238, 245, 240, 0.82)),
-    #fff;
-  box-shadow: 0 28px 66px rgba(23, 40, 36, 0.14);
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 34px 80px rgba(23, 40, 36, 0.15);
   overflow: hidden;
+  padding: 0.55rem;
 }
 
 .hero-maplist-card {
-  transform: none;
+  transform: rotate(-0.4deg);
 }
 
-.hero-maplist-card::before {
-  content: "Map + List · Granite Plains demo";
-  position: absolute;
-  z-index: 3;
-  top: 1rem;
-  left: 1rem;
-  border: 1px solid rgba(234, 216, 169, 0.95);
-  border-radius: 999px;
-  background: rgba(255, 246, 229, 0.96);
-  color: #75571c;
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-  padding: 0.42rem 0.72rem;
-  text-transform: uppercase;
-}
-
-.platform-screenshot-card::after,
-.screenshot-proof-screen .screenshot-crop::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(90deg, rgba(251, 250, 245, 0.08), transparent 10%, transparent 92%, rgba(251, 250, 245, 0.14)),
-    linear-gradient(180deg, transparent 86%, rgba(251, 250, 245, 0.16));
-}
-
-.screenshot-crop {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.screenshot-crop img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.hero-proof-image,
+.section-proof-image {
   display: block;
-  width: 132%;
-  max-width: none;
+  width: 100%;
   height: auto;
-  filter: drop-shadow(0 18px 30px rgba(23, 40, 36, 0.10));
 }
 
-.crop-maplist img {
-  transform: translate(-61%, -50%);
+.hero-proof-image {
+  border-radius: 26px;
 }
 
 .platform-screenshot-card figcaption {
-  display: none;
+  color: var(--ink-500);
+  font-size: 0.78rem;
+  font-weight: 900;
+  padding: 0.55rem 0.75rem 0.25rem;
+  text-align: center;
 }
 
 .product-section {
@@ -237,22 +200,16 @@
   margin: 0;
 }
 
-.screenshot-proof-screen .screenshot-crop {
-  position: relative;
-  inset: auto;
-  min-height: 410px;
+.screenshot-image-frame {
   margin: 1rem;
   border: 1px solid rgba(216, 222, 214, 0.95);
   border-radius: 24px;
   background: #fff;
+  overflow: hidden;
 }
 
-.screenshot-proof-screen .screenshot-crop img {
-  width: 132%;
-}
-
-.crop-dashboard img {
-  transform: translate(-43%, -50%);
+.section-proof-image {
+  border-radius: 22px;
 }
 
 .proof-card-stack {
@@ -447,10 +404,6 @@
     max-width: 860px;
   }
 
-  .platform-screenshot-card {
-    min-height: 500px;
-  }
-
   .feature-screen-grid.reverse .section-copy {
     order: 0;
   }
@@ -470,35 +423,25 @@
   }
 
   .platform-screenshot-card {
-    min-height: 330px;
     border-radius: 24px;
+    padding: 0.4rem;
   }
 
-  .hero-maplist-card::before {
-    top: 0.72rem;
-    left: 0.72rem;
-    font-size: 0.62rem;
+  .hero-maplist-card {
+    transform: none;
   }
 
-  .screenshot-crop img {
-    width: 154%;
-  }
-
-  .crop-maplist img {
-    transform: translate(-59%, -50%);
-  }
-
-  .screenshot-proof-screen .screenshot-crop {
-    min-height: 270px;
+  .hero-proof-image {
     border-radius: 18px;
   }
 
-  .screenshot-proof-screen .screenshot-crop img {
-    width: 168%;
+  .screenshot-image-frame {
+    border-radius: 18px;
+    margin: 0.75rem;
   }
 
-  .crop-dashboard img {
-    transform: translate(-45%, -50%);
+  .section-proof-image {
+    border-radius: 16px;
   }
 
   .trial-items,
