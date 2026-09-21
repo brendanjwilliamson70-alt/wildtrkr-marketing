@@ -478,3 +478,10 @@
     padding: 0.85rem;
   }
 }
+
+/* Approved platform overview */
+.overview-section { scroll-margin-top: 6rem; }
+.overview-intro { max-width: 46rem; margin-bottom: 1.5rem; }
+.overview-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #f7f6f2; border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow-soft); }
+.overview-video:focus-visible { outline: 3px solid var(--gumleaf-600); outline-offset: 4px; }
+.form-fallback { font-size: .875rem; color: var(--ink-700); }
