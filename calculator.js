@@ -1,13 +1,12 @@
 (() => {
   const DEVICE_PRICE = 200;
-  const STANDARD_RATE = 15;
-  const RENTAL_BLOCK_PRICE = 500;
+  const PLATFORM_RATE = 15;
+  const RENTAL_BLOCK_PRICE = 600;
   const RENTAL_BLOCK_SIZE = 5;
   const GST_RATE = 0.1;
 
   const purchaseDiscountRate = (quantity) => {
-    if (quantity >= 10) return 0.20;
-    if (quantity >= 5) return 0.10;
+    if (quantity >= 5) return 0.20;
     return 0;
   };
 
@@ -28,7 +27,7 @@
     const discountRate = purchaseDiscountRate(quantity);
     const discount = hardwareRrp * discountRate;
     const hardware = hardwareRrp - discount;
-    const platform = quantity * STANDARD_RATE * months;
+    const platform = quantity * PLATFORM_RATE * months;
     const subtotal = hardware + platform;
     const gst = subtotal * GST_RATE;
 
