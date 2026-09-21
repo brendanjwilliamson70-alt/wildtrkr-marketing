@@ -76,6 +76,18 @@
   ['purchase-quantity', 'purchase-period'].forEach((id) => byId(id).addEventListener('input', updatePurchase));
   ['rental-blocks', 'rental-period'].forEach((id) => byId(id).addEventListener('input', updateRental));
 
+  document.querySelectorAll('[data-quote]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const purchase = link.dataset.quote === 'purchase';
+      const summary = purchase
+        ? `Purchase enquiry: ${byId('purchase-quantity').value} cellular devices, ${byId('purchase-period').value} months of platform access. Estimated total incl. GST: ${byId('purchase-total').textContent}.`
+        : `Rental enquiry: ${integer(byId('rental-blocks').value) * RENTAL_BLOCK_SIZE} cellular devices, ${byId('rental-period').value} months, platform access included. Estimated total incl. GST: ${byId('rental-total').textContent}.`;
+      const message = byId('message');
+      const previous = message.value.replace(/^(Purchase|Rental) enquiry:[^\n]*(\n\n)?/, '');
+      message.value = summary + '\n\n' + previous;
+    });
+  });
+
   updatePurchase();
   updateRental();
 })();

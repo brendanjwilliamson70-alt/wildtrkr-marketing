@@ -562,3 +562,16 @@
   .standalone-calculator { padding: 1rem; }
 }
 
+/* Programs and practical field examples */
+.programs-section { background:#edf3ee; scroll-margin-top:6rem; }
+.programs-section h2,.field-examples h2 { max-width:850px; }
+.programs-intro { max-width:850px; font-size:1.08rem; line-height:1.7; }
+.program-benefits { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.2rem; margin-top:2rem; }
+.program-benefits article,.field-example-grid article { background:#fff; padding:1.6rem; border:1px solid var(--line); border-radius:20px; }
+.program-benefits h3,.field-example-grid h3 { margin:.6rem 0; }
+.program-benefits p,.field-example-grid p { line-height:1.65; }
+.program-number { color:#386e58; font-weight:800; font-size:.85rem; }
+.programs-footnote { margin-top:1.5rem; font-weight:700; }
+.field-example-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2rem; margin-top:1.5rem; }
+.example-takeaway { color:#386e58; font-weight:700; }
+@media(max-width:800px) { .program-benefits,.field-example-grid { grid-template-columns:1fr; } }

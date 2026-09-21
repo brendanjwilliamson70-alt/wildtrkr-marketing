@@ -15,7 +15,7 @@
   <style>
     .action-workflow-gallery{display:grid;gap:.9rem}.workflow-proof-figure{border:1px solid rgba(216,222,214,.95);border-radius:26px;background:#fff;box-shadow:0 22px 58px rgba(23,40,36,.1);margin:0;overflow:hidden;padding:.65rem}.workflow-proof-figure.primary{border-color:rgba(243,95,123,.55)}.workflow-proof-figure.blue-proof{border-color:rgba(59,130,246,.4)}.workflow-proof-figure img{display:block;width:100%;height:auto;border-radius:20px}.workflow-proof-figure figcaption{color:var(--ink-700);font-size:.78rem;font-weight:900;padding:.55rem .55rem .1rem}.trust-strip-mini{padding:2.2rem 0}.trust-strip-mini .trust-panel-mini{align-items:center;background:linear-gradient(135deg,#fff,#eef5f0);border:1px solid var(--line);border-radius:26px;box-shadow:0 16px 42px rgba(23,40,36,.08);display:grid;gap:1.2rem;grid-template-columns:1fr auto;padding:1.2rem 1.4rem}.trust-panel-mini h2{font-family:Manrope,sans-serif;font-size:1.35rem;letter-spacing:-.03em;margin:.25rem 0}.trust-panel-mini p{color:var(--ink-700);margin:0;max-width:760px}.trust-pills{display:flex;flex-wrap:wrap;gap:.55rem}.trust-pills span{background:#fff;border:1px solid var(--line);border-radius:999px;font-weight:900;padding:.55rem .75rem;white-space:nowrap}@media (max-width:800px){.trust-strip-mini .trust-panel-mini{grid-template-columns:1fr}}@media (max-width:640px){.workflow-proof-figure{border-radius:24px;padding:.4rem}.workflow-proof-figure img{border-radius:18px}}
   </style>
-  <script src="calculator.js?v=2" defer></script>
+  <script src="calculator.js?v=3" defer></script>
 </head>
 <body class="product-led">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -31,7 +31,7 @@
       <nav aria-label="Primary">
         <ul class="nav-list">
           <li><a href="#platform">Platform</a></li>
-          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#programs">Programs</a></li>
           <li><a href="#fit">Fit</a></li>
           <li><a href="/devices">Devices</a></li>
           <li><a href="#calculator">Pricing</a></li>
@@ -75,6 +75,20 @@
       </div>
     </section>
 
+    <section id="programs" class="product-section programs-section" aria-labelledby="programs-title">
+      <div class="container">
+        <p class="kicker">Programs and teams</p>
+        <h2 id="programs-title">One team or multiple programs. Keep the work connected.</h2>
+        <p class="programs-intro">Bring your devices, people and field activities together around the program they belong to. Start with a small team, or coordinate several programs with clear responsibility and visibility for management.</p>
+        <div class="program-benefits">
+          <article><span class="program-number">01</span><h3>Clear responsibility</h3><p>Nominate the person responsible for each program and update that responsibility when arrangements change. Keep your team clear on who is looking after the work.</p></article>
+          <article><span class="program-number">02</span><h3>Coordinated field work</h3><p>Manage deployed devices within a program. Bring capture records and field activities together, including shooting, baiting and site treatment where those modules are enabled.</p></article>
+          <article><span class="program-number">03</span><h3>Visibility for management</h3><p>Give field staff a view of the work assigned to them, while managers review program activity, responsibility and recorded outcomes.</p></article>
+        </div>
+        <p class="programs-footnote">A practical way to organise a few traps. A shared view as your teams and programs grow.</p>
+      </div>
+    </section>
+
     <section id="platform" class="product-section action-section">
       <div class="container feature-screen-grid">
         <div class="section-copy action-copy">
@@ -99,13 +113,11 @@
     <section id="workflow" class="product-section soft">
       <div class="container feature-screen-grid reverse">
         <div class="section-copy">
-          <p class="kicker">Action cards</p>
-          <h2>The button opens the right workflow.</h2>
-          <p>WildTrkr is designed so status does not sit as passive information. Each device row opens the workflow needed to complete the field action, with outcome details designed to be recorded quickly in the field.</p>
+          <p class="kicker">Record the response</p>
+          <h2>Complete the field work. Keep the record.</h2>
+          <p>Record captures, false activations and other outcomes as the work is completed. Field staff can enter the details on site, giving managers a connected record to review.</p>
           <ul class="compact-points">
             <li>Fast field entry: select the outcome, add notes if needed, and save</li>
-            <li>Red opens the activation-response workflow to record a catch, false activation or other field outcome</li>
-            <li>Blue opens the set-trap workflow before deployment</li>
             <li>Saved details remain connected to the Program and support reporting</li>
           </ul>
         </div>
@@ -133,19 +145,19 @@
             <li>Program activity and device utilisation</li>
             <li>Activation, capture and response history</li>
             <li>Missed heartbeat follow-ups</li>
-            <li>Structured field records that form the foundation for stakeholder reporting</li>
+            <li>Export the Trial Activity Report as a CSV for review and sharing</li>
           </ul>
         </div>
 
         <div class="report-proof-panel">
           <p class="kicker">From activity to evidence</p>
           <h3>Know what happened, who responded and what was recorded.</h3>
-          <p>WildTrkr is designed to turn day-to-day field activity into a usable operational record, giving teams and management better visibility now and cleaner reporting later.</p>
+          <p>Review the activity recorded during your program and generate a Trial Activity Report. Keep the supporting field records connected to the work they describe.</p>
           <div class="report-proof-grid">
             <span>Program activity</span>
             <span>Assigned responsibility</span>
             <span>Field outcome records</span>
-            <span>Reporting foundation</span>
+            <span>Trial Activity Report</span>
           </div>
         </div>
       </div>
@@ -161,6 +173,17 @@
           <article><h3>Shooting</h3><p>Record shooting activity in the same operational context as the rest of the field program.</p></article>
           <article><h3>Baiting</h3><p>Record baiting activity and build a consistent history of work completed across sites.</p></article>
           <article><h3>Site Treatment</h3><p>Capture treatment activity so managers have a broader view of work completed in the field.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section field-examples" aria-labelledby="examples-title">
+      <div class="container">
+        <p class="kicker">Experience in the field</p>
+        <h2 id="examples-title">Practical value when it matters.</h2>
+        <div class="field-example-grid">
+          <article><h3>Recovering a stolen cage</h3><p>After a deployed cage was stolen, a council used the monitoring device’s GPS location to locate and recover it.</p><p class="example-takeaway">Location visibility helped the team recover valuable equipment.</p></article>
+          <article><h3>Responding to deer-trap activations</h3><p>Monitoring devices on deer cages alerted the team when a trap activated, helping them respond quickly and reduce the time animals spent in the trap.</p><p class="example-takeaway">Earlier awareness supported a prompt field response.</p></article>
         </div>
       </div>
     </section>
@@ -197,10 +220,10 @@
       <div class="container">
         <div class="calculator-heading">
           <div>
-            <p class="kicker">Package calculator</p>
+            <p class="kicker">Cellular trap-monitoring pricing</p>
             <h2 class="fixed-line-heading"><span>Build the package</span> <span>that fits your program.</span></h2>
           </div>
-          <p>Purchase and rental are different ways to get started, so calculate each one independently using the quantities and timeframes that suit your program.</p>
+          <p>Compare purchasing devices with renting for a shorter program. Both estimates include cellular trap-monitoring platform access for your selected period. Satellite monitoring and additional Field Operations modules are quoted separately.</p>
         </div>
 
         <div class="dual-calculators" data-calculator>
@@ -231,7 +254,7 @@
             </dl>
             <div class="option-total"><span>Estimated total incl. GST</span><strong id="purchase-total">$1,127.50</strong></div>
             <p class="offer-note"><strong>Quantity discounts are automatic:</strong> Orders of five or more devices receive 20% off hardware. Platform access is calculated separately.</p>
-            <a class="button button-primary option-action" href="#contact">Request a purchase quote</a>
+            <a class="button button-primary option-action" data-quote="purchase" href="#contact">Request a purchase quote</a>
           </article>
 
           <article class="standalone-calculator rental-calculator">
@@ -259,7 +282,7 @@
             </dl>
             <div class="option-total"><span>Estimated total incl. GST</span><strong id="rental-total">$660.00</strong></div>
             <p class="offer-note">Rental is $600 + GST per five devices for each three-month block. Outbound freight is included; return freight is paid by the customer.</p>
-            <a class="button button-secondary option-action" href="#contact">Request a rental quote</a>
+            <a class="button button-secondary option-action" data-quote="rental" href="#contact">Request a rental quote</a>
           </article>
         </div>
         <div class="calculator-next-step">
