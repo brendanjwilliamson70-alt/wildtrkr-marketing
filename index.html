@@ -15,6 +15,7 @@
   <style>
     .action-workflow-gallery{display:grid;gap:.9rem}.workflow-proof-figure{border:1px solid rgba(216,222,214,.95);border-radius:26px;background:#fff;box-shadow:0 22px 58px rgba(23,40,36,.1);margin:0;overflow:hidden;padding:.65rem}.workflow-proof-figure.primary{border-color:rgba(243,95,123,.55)}.workflow-proof-figure.blue-proof{border-color:rgba(59,130,246,.4)}.workflow-proof-figure img{display:block;width:100%;height:auto;border-radius:20px}.workflow-proof-figure figcaption{color:var(--ink-700);font-size:.78rem;font-weight:900;padding:.55rem .55rem .1rem}.trust-strip-mini{padding:2.2rem 0}.trust-strip-mini .trust-panel-mini{align-items:center;background:linear-gradient(135deg,#fff,#eef5f0);border:1px solid var(--line);border-radius:26px;box-shadow:0 16px 42px rgba(23,40,36,.08);display:grid;gap:1.2rem;grid-template-columns:1fr auto;padding:1.2rem 1.4rem}.trust-panel-mini h2{font-family:Manrope,sans-serif;font-size:1.35rem;letter-spacing:-.03em;margin:.25rem 0}.trust-panel-mini p{color:var(--ink-700);margin:0;max-width:760px}.trust-pills{display:flex;flex-wrap:wrap;gap:.55rem}.trust-pills span{background:#fff;border:1px solid var(--line);border-radius:999px;font-weight:900;padding:.55rem .75rem;white-space:nowrap}@media (max-width:800px){.trust-strip-mini .trust-panel-mini{grid-template-columns:1fr}}@media (max-width:640px){.workflow-proof-figure{border-radius:24px;padding:.4rem}.workflow-proof-figure img{border-radius:18px}}
   </style>
+  <script src="calculator.js" defer></script>
 </head>
 <body class="product-led">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -33,6 +34,7 @@
           <li><a href="#workflow">Workflow</a></li>
           <li><a href="#fit">Fit</a></li>
           <li><a href="/devices">Devices</a></li>
+          <li><a href="#calculator">Pricing</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a class="login-link" href="https://app.wildtrkr.com/login">Login</a></li>
         </ul>
@@ -188,6 +190,83 @@
           <span>Australian data storage</span>
           <span>Field-tested workflow</span>
         </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+      <div class="container">
+        <div class="calculator-heading">
+          <div>
+            <p class="kicker">Package calculator</p>
+            <h2 class="fixed-line-heading"><span>Build the package</span> <span>that fits your program.</span></h2>
+          </div>
+          <p>Purchase and rental are different ways to get started, so calculate each one independently using the quantities and timeframes that suit your program.</p>
+        </div>
+
+        <div class="dual-calculators" data-calculator>
+          <article class="standalone-calculator purchase-calculator">
+            <div class="calculator-card-heading">
+              <p class="kicker">Purchase</p>
+              <h3>Build a purchase estimate</h3>
+              <p>Enter the number of devices you want to own and the period you want to budget for.</p>
+            </div>
+            <div class="calculator-controls">
+              <label for="purchase-quantity">Number of devices</label>
+              <div class="stepper">
+                <button type="button" data-purchase-step="-1" aria-label="Decrease purchase device quantity">−</button>
+                <input id="purchase-quantity" type="number" min="1" step="1" value="5" inputmode="numeric" />
+                <button type="button" data-purchase-step="1" aria-label="Increase purchase device quantity">+</button>
+              </div>
+              <label for="purchase-period">Budget period</label>
+              <select id="purchase-period"><option value="3">3 months</option><option value="6">6 months</option><option value="12">12 months</option></select>
+            </div>
+            <dl class="calculator-breakdown">
+              <div><dt>Devices</dt><dd id="purchase-device-count">5</dd></div>
+              <div><dt>Hardware RRP at $200/device</dt><dd id="purchase-hardware-rrp">$1,000.00</dd></div>
+              <div><dt id="purchase-discount-label">10% quantity discount</dt><dd id="purchase-discount">−$100.00</dd></div>
+              <div><dt>Hardware after discount</dt><dd id="purchase-hardware">$900.00</dd></div>
+              <div><dt>Standard platform for period</dt><dd id="purchase-platform">$225.00</dd></div>
+              <div><dt>Subtotal</dt><dd id="purchase-subtotal">$1,125.00</dd></div>
+              <div><dt>GST (10%)</dt><dd id="purchase-gst">$112.50</dd></div>
+            </dl>
+            <div class="option-total"><span>Estimated total incl. GST</span><strong id="purchase-total">$1,237.50</strong></div>
+            <p class="offer-note"><strong>Quantity discounts are automatic:</strong> 5–9 devices receive 10% off hardware; orders of 10 or more receive 20% off hardware. Platform access is calculated separately.</p>
+            <a class="button button-primary option-action" href="#contact">Request a purchase quote</a>
+          </article>
+
+          <article class="standalone-calculator rental-calculator">
+            <div class="calculator-card-heading">
+              <p class="kicker">Rental</p>
+              <h3>Build a rental estimate</h3>
+              <p>Rental is supplied in five-device blocks. Choose how many blocks you need and the rental period.</p>
+            </div>
+            <div class="calculator-controls">
+              <label for="rental-blocks">Five-device rental blocks</label>
+              <div class="stepper">
+                <button type="button" data-rental-step="-1" aria-label="Decrease rental blocks">−</button>
+                <input id="rental-blocks" type="number" min="1" step="1" value="1" inputmode="numeric" />
+                <button type="button" data-rental-step="1" aria-label="Increase rental blocks">+</button>
+              </div>
+              <label for="rental-period">Rental period</label>
+              <select id="rental-period"><option value="3">3 months</option><option value="6">6 months</option><option value="9">9 months</option><option value="12">12 months</option></select>
+            </div>
+            <dl class="calculator-breakdown">
+              <div><dt>Devices supplied</dt><dd id="rental-device-count">5</dd></div>
+              <div><dt>Rental period</dt><dd><span id="rental-months">3</span> months</dd></div>
+              <div><dt>Premium platform</dt><dd>Included</dd></div>
+              <div><dt>Subtotal</dt><dd id="rental-subtotal">$500.00</dd></div>
+              <div><dt>GST (10%)</dt><dd id="rental-gst">$50.00</dd></div>
+            </dl>
+            <div class="option-total"><span>Estimated total incl. GST</span><strong id="rental-total">$550.00</strong></div>
+            <p class="offer-note">Rental is $500 + GST per five devices for each three-month block. Outbound freight is included; return freight is paid by the customer.</p>
+            <a class="button button-secondary option-action" href="#contact">Request a rental quote</a>
+          </article>
+        </div>
+        <div class="calculator-next-step">
+          <p>Orders are confirmed and processed manually by WildTrkr. Need procurement approval or a larger rollout?</p>
+          <a class="text-link" href="#contact">Request a formal quote <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="fine-print calculator-terms">Purchase estimates use cellular devices at a $200 RRP, with 10% off hardware for 5–9 devices and 20% off hardware for 10 or more devices. Standard platform access is $15 per device per month. Rental is $500 plus GST per five devices per three-month block and includes Premium platform access. Outbound rental freight is included; return freight is paid by the customer. Final pricing remains subject to configuration, volume and deployment requirements.</p>
       </div>
     </section>
 
