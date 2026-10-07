@@ -15,8 +15,9 @@
   <style>
     .action-workflow-gallery{display:grid;gap:.9rem}.workflow-proof-figure{border:1px solid rgba(216,222,214,.95);border-radius:26px;background:#fff;box-shadow:0 22px 58px rgba(23,40,36,.1);margin:0;overflow:hidden;padding:.65rem}.workflow-proof-figure.primary{border-color:rgba(243,95,123,.55)}.workflow-proof-figure.blue-proof{border-color:rgba(59,130,246,.4)}.workflow-proof-figure img{display:block;width:100%;height:auto;border-radius:20px}.workflow-proof-figure figcaption{color:var(--ink-700);font-size:.78rem;font-weight:900;padding:.55rem .55rem .1rem}.trust-strip-mini{padding:2.2rem 0}.trust-strip-mini .trust-panel-mini{align-items:center;background:linear-gradient(135deg,#fff,#eef5f0);border:1px solid var(--line);border-radius:26px;box-shadow:0 16px 42px rgba(23,40,36,.08);display:grid;gap:1.2rem;grid-template-columns:1fr auto;padding:1.2rem 1.4rem}.trust-panel-mini h2{font-family:Manrope,sans-serif;font-size:1.35rem;letter-spacing:-.03em;margin:.25rem 0}.trust-panel-mini p{color:var(--ink-700);margin:0;max-width:760px}.trust-pills{display:flex;flex-wrap:wrap;gap:.55rem}.trust-pills span{background:#fff;border:1px solid var(--line);border-radius:999px;font-weight:900;padding:.55rem .75rem;white-space:nowrap}@media (max-width:800px){.trust-strip-mini .trust-panel-mini{grid-template-columns:1fr}}@media (max-width:640px){.workflow-proof-figure{border-radius:24px;padding:.4rem}.workflow-proof-figure img{border-radius:18px}}
   </style>
-  <script src="calculator.js?v=3" defer></script>
-  <script src="contact.js?v=1" defer></script>
+  <script src="calculator.js?v=5" defer></script>
+  <script src="gateway-calculator.js?v=3" defer></script>
+  <script src="contact.js?v=3" defer></script>
 </head>
 <body class="product-led">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -48,10 +49,10 @@
       <div class="container">
         <div class="hero-headline-block">
           <p class="kicker">Smarter Field Monitoring</p>
-          <h1>Get clear insight into your field program.</h1>
-          <p class="hero-copy">Know what is happening in the field, who is responsible, and what work has been completed — all in one platform.</p>
+          <h1>Your teams.<br />Clear responsibility.<br />Connected programs.</h1>
+          <p class="hero-copy">Monitor trap activations, coordinate field responses and keep trapping records in one place—for councils, land managers and field teams.</p>
           <div class="cta-row">
-            <a class="button button-primary" href="#contact">Request a Demo</a>
+            <a class="button button-primary" data-enquiry="walkthrough" href="#contact">Book a program walkthrough</a>
             <a class="button button-secondary" href="#overview">Watch WildTrkr in Action</a>
           </div>
         </div>
@@ -76,91 +77,73 @@
       </div>
     </section>
 
-    <section id="programs" class="product-section programs-section" aria-labelledby="programs-title">
-      <div class="container">
-        <p class="kicker">Programs and teams</p>
-        <h2 id="programs-title">One team or multiple programs. Keep the work connected.</h2>
-        <p class="programs-intro">Bring your devices, people and field activities together around the program they belong to. Start with a small team, or coordinate several programs with clear responsibility and visibility for management.</p>
-        <div class="program-benefits">
-          <article><span class="program-number">01</span><h3>Clear responsibility</h3><p>Nominate the person responsible for each program and update that responsibility when arrangements change. Keep your team clear on who is looking after the work.</p></article>
-          <article><span class="program-number">02</span><h3>Coordinated field work</h3><p>Manage deployed devices within a program. Bring capture records and field activities together, including shooting, baiting and site treatment where those modules are enabled.</p></article>
-          <article><span class="program-number">03</span><h3>Visibility for management</h3><p>Give field staff a view of the work assigned to them, while managers review program activity, responsibility and recorded outcomes.</p></article>
-        </div>
-        <p class="programs-footnote">A practical way to organise a few traps. A shared view as your teams and programs grow.</p>
-      </div>
-    </section>
-
-    <section id="platform" class="product-section action-section">
+    <section id="platform" class="product-section attention-story" aria-labelledby="attention-title">
       <div class="container feature-screen-grid">
-        <div class="section-copy action-copy">
-          <p class="kicker">Status to action</p>
-          <h2>See what needs attention, and who owns it.</h2>
-          <p>Map + List brings teams, responsible people, Programs and devices together. Managers can see what has triggered, what needs checking, what is active and what is not deployed, while field staff can see the work assigned to them.</p>
-          <p class="action-bridge">Every device status leads to a clear field action.</p>
-          <ul class="action-card-list">
-            <li class="action-card action-red"><strong>Red</strong><span>Respond to Activation</span></li>
-            <li class="action-card action-yellow"><strong>Yellow</strong><span>Check Device</span></li>
-            <li class="action-card action-green"><strong>Green</strong><span>Manage Trap</span></li>
-            <li class="action-card action-blue"><strong>Blue</strong><span>Set Trap</span></li>
-          </ul>
-        </div>
-
-        <figure class="workflow-image-card">
-          <img class="section-proof-image" src="/assets/workflow-list-proof.png" alt="WildTrkr Live Device List showing team structure, Programs, filters, attention counts and colour-coded device status" />
-        </figure>
+        <div class="section-copy"><p class="kicker">A view for oversight</p><h2 id="attention-title">Know where attention is needed.</h2><p>See program and team activity together. The device list makes triggered traps and missed check-ins visible alongside the people looking after the work.</p><div class="status-key"><span><i class="dot red"></i>Triggered</span><span><i class="dot yellow"></i>Check device</span><span><i class="dot green"></i>Trap set</span><span><i class="dot blue"></i>Not deployed</span></div></div>
+        <figure class="story-screen"><img src="/assets/team-attention-demo.png" alt="WildTrkr demonstration team view with North Ridge Program, four devices and attention counts" loading="lazy" /><figcaption>Actual team overview · Demonstration data. This is an oversight view. <a class="proof-open" href="/assets/team-attention-demo.png">View full-size demonstration screen</a></figcaption></figure>
       </div>
     </section>
 
-    <section id="workflow" class="product-section soft">
+    <section id="workflow" class="product-section soft" aria-labelledby="outcome-title">
       <div class="container feature-screen-grid reverse">
-        <div class="section-copy">
-          <p class="kicker">Record the response</p>
-          <h2>Complete the field work. Keep the record.</h2>
-          <p>Record captures, false activations and other outcomes as the work is completed. Field staff can enter the details on site, giving managers a connected record to review.</p>
-          <ul class="compact-points">
-            <li>Fast field entry: select the outcome, add notes if needed, and save</li>
-            <li>Saved details remain connected to the Program and support reporting</li>
-          </ul>
-        </div>
-
-        <div class="action-workflow-gallery" aria-label="WildTrkr action workflow screenshots">
-          <figure class="workflow-proof-figure primary red-proof">
-            <img src="/assets/record-trap-outcome-proof.png" alt="WildTrkr activation outcome workflow screen using demo data" />
-            <figcaption>Red action: respond to an activation and record the field outcome.</figcaption>
-          </figure>
-          <figure class="workflow-proof-figure blue-proof">
-            <img src="/assets/set-trap-proof.png" alt="WildTrkr Set Trap workflow screen using demo data" />
-            <figcaption>Blue action: set an undeployed device into field operation.</figcaption>
-          </figure>
-        </div>
+        <div class="section-copy"><p class="kicker">Field outcome recording</p><h2 id="outcome-title">Keep the response connected to the work.</h2><p>Record a catch or a no-capture outcome against the device. Accidental triggers are recorded separately as false activations.</p><p class="outcome-emphasis">A field response becomes a record the team can review.</p></div>
+        <figure class="story-screen"><img src="/assets/catch-demo.png" alt="Actual Record Catch demonstration screen for WT0502, with responsible operator, job reference and outcome details" loading="lazy" /><figcaption>Actual Record Catch screen · Demonstration data, shown from a manager session. <a class="proof-open" href="/assets/catch-demo.png">View full-size demonstration screen</a></figcaption></figure>
       </div>
     </section>
 
-    <section class="product-section soft">
-      <div class="container feature-screen-grid reverse">
-        <div class="section-copy">
-          <p class="kicker">Program reporting</p>
-          <h2>Prove the work without rebuilding the story later.</h2>
-          <p>WildTrkr keeps device events, field activity and outcomes in structured records so managers can review what happened without reconstructing the program from notes, calls and spreadsheets.</p>
-          <ul class="compact-points">
-            <li>Program activity and device utilisation</li>
-            <li>Activation, capture and response history</li>
-            <li>Missed heartbeat follow-ups</li>
-            <li>Export the Trial Activity Report as a CSV for review and sharing</li>
-          </ul>
-        </div>
-
-        <div class="report-proof-panel">
-          <p class="kicker">From activity to evidence</p>
-          <h3>Know what happened, who responded and what was recorded.</h3>
-          <p>Review the activity recorded during your program and generate a Trial Activity Report. Keep the supporting field records connected to the work they describe.</p>
-          <div class="report-proof-grid">
-            <span>Program activity</span>
-            <span>Assigned responsibility</span>
-            <span>Field outcome records</span>
-            <span>Trial Activity Report</span>
+    <section id="multi-trap" class="product-section gateway-story" aria-labelledby="gateway-title">
+      <div class="container">
+        <div class="story-heading"><p class="kicker">WildTrkr Gateway</p><h2 id="gateway-title">Nearby traps.<br />One connected system.</h2><p>Monitor a cluster of traps with a small, lightweight sensor on each trap. Sensors communicate wirelessly through a central WildTrkr Gateway, so each trap's activation and status can be seen in WildTrkr.</p></div>
+        <figure class="gateway-diagram">
+          <div class="gateway-system">
+            <p class="gateway-system-label">Trap sensors + gateway</p>
+            <div class="sensor-cluster" aria-label="Three illustrative traps, each with its own sensor">
+              <div class="sensor-trap"><span class="trap-symbol" aria-hidden="true"><i></i></span><strong>Trap A</strong><span>Small sensor</span></div>
+              <div class="sensor-trap"><span class="trap-symbol" aria-hidden="true"><i></i></span><strong>Trap B</strong><span>Small sensor</span></div>
+              <div class="sensor-trap"><span class="trap-symbol" aria-hidden="true"><i></i></span><strong>Trap C</strong><span>Small sensor</span></div>
+            </div>
+            <div class="gateway-connector"><span>Wireless connection</span><span aria-hidden="true">↓</span></div>
+            <div class="gateway-node"><span class="gateway-symbol" aria-hidden="true"></span><strong>WildTrkr Gateway</strong><span>Connects the trap sensors</span></div>
           </div>
+          <div class="gateway-uplink"><span aria-hidden="true">→</span><span>To WildTrkr</span></div>
+          <div class="gateway-platform"><span class="kicker">WildTrkr</span><strong>Each trap stays visible.</strong><ul><li>Trap A <span>Individual status</span></li><li>Trap B <span>Individual status</span></li><li>Trap C <span>Individual status</span></li></ul></div>
+          <figcaption>Illustrative system diagram. Three traps shown for clarity, not as a capacity limit. The gateway is connection infrastructure, not a trap.</figcaption>
+        </figure>
+        <p class="gateway-fit">For clustered trapping, including small traps where the sensor setup is suitable. Sensors alert on activation when the trap is set.</p>
+        <div class="gateway-order"><p><strong>Available now</strong><span>Cellular WildTrkr Gateway and trap sensors.</span></p><a class="button button-primary" data-enquiry="gateway" href="#contact">Enquire to order</a></div>
+      </div>
+    </section>
+
+    <section class="product-section team-story" aria-labelledby="team-title">
+      <div class="container">
+        <div class="story-heading"><p class="kicker">From field work to oversight</p><h2 id="team-title">Everyone knows their part.</h2><p>Field staff focus on their assigned work. Managers keep a view of the teams and devices within their scope.</p></div>
+        <div class="role-layout">
+          <ol class="role-progression" aria-label="Role progression from Operator to Account Manager">
+            <li><span class="role-eyebrow">Field work</span><h3>Operator</h3><p>See assigned devices and record field outcomes.</p></li>
+            <li><span class="role-eyebrow">Field coordination</span><h3>Field Officer</h3><p>Coordinate your own devices and your direct Operators.</p></li>
+            <li><span class="role-eyebrow">Team oversight</span><h3>Field Manager</h3><p>Oversee field teams and devices within your reporting scope.</p></li>
+            <li><span class="role-eyebrow">Account oversight</span><h3>Account Manager</h3><p>Organise users, reporting lines and device allocation across the account.</p></li>
+          </ol>
+          <aside class="admin-role"><span class="role-eyebrow">Separate oversight role</span><h3>Admin</h3><p>Oversee the customer or field teams within your assigned scope.</p></aside>
         </div>
+        <p class="story-note">Role progression shown for clarity; not every team needs every role. Program responsibility and membership are separate from these reporting relationships.</p>
+      </div>
+    </section>
+
+    <section id="programs" class="product-section programs-story" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="story-heading"><p class="kicker">Programs and people</p><h2 id="programs-title">One shared program.<br />Clear responsibility.</h2><p>With team responsibilities clear, bring the people and devices for a campaign together in a Program, with a named Responsible Person accountable for the run.</p></div>
+        <figure class="story-screen program-screen"><img src="/assets/program-demo.png" alt="Actual WildTrkr Creek and Boundary demonstration program: Ella Brooks, two members, four devices and Active status" loading="lazy" /><figcaption>Actual WildTrkr screen · Granite Plains demonstration data. <a class="proof-open" href="/assets/program-demo.png">View full-size demonstration screen</a></figcaption></figure>
+        <div class="proof-labels"><p><strong>A named person</strong><span>See who is responsible for the program.</span></p><p><strong>A connected team</strong><span>Keep program members and devices together.</span></p><p><strong>A shared view</strong><span>Review the current team and device roster.</span></p></div>
+        <p class="story-note">Program membership and device allocation remain separate.</p>
+      </div>
+    </section>
+
+    <section id="reporting" class="product-section reporting-story" aria-labelledby="report-title">
+      <div class="container">
+        <div class="story-heading"><p class="kicker">Management reporting</p><h2 id="report-title">Make the field records useful.</h2><p>Review capture outcomes, response times and program summaries in focused reports.</p></div>
+        <figure class="story-screen report-catalogue" tabindex="0" aria-label="Demonstration report catalogue; scroll horizontally on small screens"><img src="/assets/report-catalogue-demo.png" alt="Actual WildTrkr report catalogue showing Capture Summary, Trial Activity and Capture Detail, Response Time, Customer and Program Summary and other reports" loading="lazy" /><figcaption>Actual WildTrkr report catalogue · Demonstration account. Report selection shown, not a populated report. <a class="proof-open" href="/assets/report-catalogue-demo.png">View full-size demonstration screen</a></figcaption></figure>
+        <div class="report-next"><p>See how responsibility, field response and reporting fit your trapping work.</p><a class="button button-primary" data-enquiry="walkthrough" href="#contact">Book a program walkthrough</a></div>
       </div>
     </section>
 
@@ -221,11 +204,13 @@
       <div class="container">
         <div class="calculator-heading">
           <div>
-            <p class="kicker">Cellular trap-monitoring pricing</p>
+            <p class="kicker">Individual cellular-device pricing</p>
             <h2 class="fixed-line-heading"><span>Build the package</span> <span>that fits your program.</span></h2>
           </div>
-          <p>Compare purchasing devices with renting for a shorter program. Both estimates include cellular trap-monitoring platform access for your selected period. Satellite monitoring and additional Field Operations modules are quoted separately.</p>
+          <p>These estimates are for individual cellular trap-monitoring devices, with platform access for your selected period. Gateway and sensor systems are priced separately.</p>
         </div>
+
+        <p class="gateway-pricing-note">For clustered traps, use the separate <a href="#gateway-estimate-title">Gateway and sensor estimate below</a>.</p>
 
         <div class="dual-calculators" data-calculator>
           <article class="standalone-calculator purchase-calculator">
@@ -258,39 +243,46 @@
             <a class="button button-primary option-action" data-quote="purchase" href="#contact">Request a purchase quote</a>
           </article>
 
-          <article class="standalone-calculator rental-calculator">
-            <div class="calculator-card-heading">
-              <p class="kicker">Rental</p>
-              <h3>Build a rental estimate</h3>
-              <p>Rental is supplied in five-device blocks. Choose how many blocks you need and the rental period.</p>
-            </div>
-            <div class="calculator-controls">
-              <label for="rental-blocks">Five-device rental blocks</label>
-              <div class="stepper">
-                <button type="button" data-rental-step="-1" aria-label="Decrease rental blocks">−</button>
-                <input id="rental-blocks" type="number" min="1" step="1" value="1" inputmode="numeric" />
-                <button type="button" data-rental-step="1" aria-label="Increase rental blocks">+</button>
-              </div>
-              <label for="rental-period">Rental period</label>
-              <select id="rental-period"><option value="3">3 months</option><option value="6">6 months</option><option value="9">9 months</option><option value="12">12 months</option></select>
-            </div>
-            <dl class="calculator-breakdown">
-              <div><dt>Devices supplied</dt><dd id="rental-device-count">5</dd></div>
-              <div><dt>Rental period</dt><dd><span id="rental-months">3</span> months</dd></div>
-              <div><dt>Platform access</dt><dd>Included</dd></div>
-              <div><dt>Subtotal</dt><dd id="rental-subtotal">$600.00</dd></div>
-              <div><dt>GST (10%)</dt><dd id="rental-gst">$60.00</dd></div>
-            </dl>
-            <div class="option-total"><span>Estimated total incl. GST</span><strong id="rental-total">$660.00</strong></div>
-            <p class="offer-note">Rental is $600 + GST per five devices for each three-month block. Outbound freight is included; return freight is paid by the customer.</p>
-            <a class="button button-secondary option-action" data-quote="rental" href="#contact">Request a rental quote</a>
-          </article>
+<article class="standalone-calculator gateway-calculator" aria-labelledby="gateway-estimate-title">
+  <div class="calculator-card-heading">
+    <p class="kicker">Cellular Gateway and sensors</p>
+    <h3 id="gateway-estimate-title">Build a Gateway system estimate</h3>
+    <p>Gateways are $350 each. Sensors are sold in packs of five at $350 per pack. Monitoring is $30 per Gateway per month, with sensor monitoring included. All rates exclude GST.</p>
+  </div>
+  <div class="calculator-controls">
+    <label for="gateway-quantity">Gateways</label>
+    <input id="gateway-quantity" type="number" min="1" step="1" value="1" inputmode="numeric" />
+    <label for="sensor-packs">Sensor packs (5 sensors per pack)</label>
+    <input id="sensor-packs" type="number" min="1" step="1" value="1" inputmode="numeric" aria-describedby="sensor-count-summary" />
+    <p id="sensor-count-summary" aria-live="polite">Total sensors: <strong id="sensor-count">5</strong></p>
+    <label for="gateway-period">Budget period</label>
+    <select id="gateway-period"><option value="3">3 months</option><option value="6">6 months</option><option value="12">12 months</option></select>
+  </div>
+  <dl class="calculator-breakdown">
+    <div><dt>Gateway hardware</dt><dd id="gateway-hardware"></dd></div>
+    <div><dt>Sensor hardware</dt><dd id="sensor-hardware"></dd></div>
+    <div><dt>Upfront hardware excl. GST</dt><dd id="gateway-upfront"></dd></div>
+    <div><dt>Monitoring per month excl. GST</dt><dd id="gateway-monthly"></dd></div>
+    <div><dt>Subscription for selected period</dt><dd id="gateway-subscription"></dd></div>
+    <div><dt>Subtotal</dt><dd id="gateway-subtotal"></dd></div>
+    <div><dt>GST (10%)</dt><dd id="gateway-gst"></dd></div>
+  </dl>
+  <div class="option-total"><span>Hardware + selected monitoring period incl. GST</span><strong id="gateway-total"></strong></div>
+  <div class="gateway-expectations">
+    <p>Designed for groups of nearby traps. Gateway coverage varies with vegetation, terrain and placement. Talk to us about your trap layout so we can recommend a suitable setup.</p>
+    <p class="gateway-capacity-note">Calculator quantities are for pricing and don’t confirm coverage or sensor capacity.</p>
+  </div>
+  <p class="offer-note">Final configuration and freight are confirmed with your quote.</p>
+  <a class="button button-primary option-action" href="#contact" data-gateway-quote>Request a Gateway system quote</a>
+</article>
+
         </div>
+        <p class="rental-enquiry">Only running a short-term trapping program? <a href="#contact" data-enquiry="rental">Talk to us</a> about our rental plans.</p>
         <div class="calculator-next-step">
           <p>Orders are confirmed and processed manually by WildTrkr. Need procurement approval or a larger rollout?</p>
           <a class="text-link" href="#contact">Request a formal quote <span aria-hidden="true">→</span></a>
         </div>
-        <p class="fine-print calculator-terms">Purchase estimates use cellular devices at a $200 RRP, with 20% off hardware for five or more devices. Platform access is $15 per device per month. Rental is $600 plus GST per five devices per three-month block and includes platform access. Outbound rental freight is included; return freight is paid by the customer. Final pricing remains subject to configuration, volume and deployment requirements.</p>
+        <p class="fine-print calculator-terms">Purchase estimates use cellular devices at a $200 RRP, with 20% off hardware for five or more devices. Platform access is $15 per device per month. Final pricing remains subject to configuration, volume and deployment requirements.</p>
       </div>
     </section>
 
@@ -298,8 +290,8 @@
       <div class="container contact-grid">
         <div>
           <p class="kicker">Start the conversation</p>
-          <h2>Ready to see how WildTrkr could support your field program?</h2>
-          <p class="form-intro">Tell us about your monitoring devices, field workflows and reporting needs. If you are interested in conducting a controlled field trial, we can discuss a practical trial pathway using your devices, operators and reporting requirements.</p>
+          <h2>Discuss your trapping setup</h2>
+          <p class="form-intro">Tell us what you need: a program walkthrough, devices or a Gateway and sensor system. We will get in touch to discuss your setup and the next step.</p>
         </div>
         <form class="contact-form" action="/api/contact" method="post">
           <label for="name">Name</label>

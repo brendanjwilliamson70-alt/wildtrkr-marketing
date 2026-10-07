@@ -3,6 +3,24 @@
   if (!form) return;
   const button = form.querySelector('button[type="submit"]');
   const status = document.getElementById('contact-status');
+  const message = form.querySelector('[name="Message"]');
+  let generatedSummary = '';
+  const setEnquiry = summary => {
+    // Replace only our untouched summary; keep anything the visitor edited.
+    const previous = generatedSummary && message.value.startsWith(generatedSummary + '\n\n')
+      ? message.value.slice(generatedSummary.length + 2) : message.value;
+    message.value = summary + '\n\n' + previous;
+    generatedSummary = summary;
+  };
+  document.querySelectorAll('[data-enquiry]').forEach(link => {
+    link.addEventListener('click', () => setEnquiry(link.dataset.enquiry === 'gateway'
+      ? 'Gateway enquiry: I am interested in a cellular WildTrkr Gateway and trap sensors.'
+      : link.dataset.enquiry === 'rental'
+        ? 'Rental enquiry: I am running a short-term trapping program and would like to discuss rental plans.'
+        : 'Walkthrough enquiry: I would like to discuss my trapping program and arrange a walkthrough.'));
+  });
+  document.addEventListener('wildtrkr:enquiry', event => setEnquiry(event.detail));
+  form.addEventListener('reset', () => { generatedSummary = ''; });
   button.disabled = false;
   form.addEventListener('submit', async event => {
     event.preventDefault();

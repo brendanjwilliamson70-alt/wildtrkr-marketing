@@ -1,8 +1,6 @@
 (() => {
   const DEVICE_PRICE = 200;
   const PLATFORM_RATE = 15;
-  const RENTAL_BLOCK_PRICE = 600;
-  const RENTAL_BLOCK_SIZE = 5;
   const GST_RATE = 0.1;
 
   const purchaseDiscountRate = (quantity) => {
@@ -43,22 +41,6 @@
     byId('purchase-total').textContent = money.format(subtotal + gst);
   }
 
-  function updateRental() {
-    const blocks = integer(byId('rental-blocks').value);
-    const months = Number(byId('rental-period').value);
-    const devices = blocks * RENTAL_BLOCK_SIZE;
-    const periods = months / 3;
-    const subtotal = blocks * periods * RENTAL_BLOCK_PRICE;
-    const gst = subtotal * GST_RATE;
-
-    byId('rental-blocks').value = blocks;
-    byId('rental-device-count').textContent = devices;
-    byId('rental-months').textContent = months;
-    byId('rental-subtotal').textContent = money.format(subtotal);
-    byId('rental-gst').textContent = money.format(gst);
-    byId('rental-total').textContent = money.format(subtotal + gst);
-  }
-
   document.querySelectorAll('[data-purchase-step]').forEach((button) => {
     button.addEventListener('click', () => {
       byId('purchase-quantity').value = integer(byId('purchase-quantity').value) + Number(button.dataset.purchaseStep);
@@ -66,28 +48,15 @@
     });
   });
 
-  document.querySelectorAll('[data-rental-step]').forEach((button) => {
-    button.addEventListener('click', () => {
-      byId('rental-blocks').value = integer(byId('rental-blocks').value) + Number(button.dataset.rentalStep);
-      updateRental();
-    });
-  });
-
   ['purchase-quantity', 'purchase-period'].forEach((id) => byId(id).addEventListener('input', updatePurchase));
-  ['rental-blocks', 'rental-period'].forEach((id) => byId(id).addEventListener('input', updateRental));
 
   document.querySelectorAll('[data-quote]').forEach((link) => {
     link.addEventListener('click', () => {
-      const purchase = link.dataset.quote === 'purchase';
-      const summary = purchase
-        ? `Purchase enquiry: ${byId('purchase-quantity').value} cellular devices, ${byId('purchase-period').value} months of platform access. Estimated total incl. GST: ${byId('purchase-total').textContent}.`
-        : `Rental enquiry: ${integer(byId('rental-blocks').value) * RENTAL_BLOCK_SIZE} cellular devices, ${byId('rental-period').value} months, platform access included. Estimated total incl. GST: ${byId('rental-total').textContent}.`;
-      const message = byId('message');
-      const previous = message.value.replace(/^(Purchase|Rental) enquiry:[^\n]*(\n\n)?/, '');
-      message.value = summary + '\n\n' + previous;
+      const summary = `Purchase enquiry: ${byId('purchase-quantity').value} cellular devices, ${byId('purchase-period').value} months of platform access. Estimated total incl. GST: ${byId('purchase-total').textContent}.`;
+      document.dispatchEvent(new CustomEvent('wildtrkr:enquiry', { detail: summary }));
     });
   });
 
   updatePurchase();
-  updateRental();
+
 })();
