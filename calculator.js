@@ -52,7 +52,7 @@
 
   document.querySelectorAll('[data-quote]').forEach((link) => {
     link.addEventListener('click', () => {
-      const summary = `Purchase enquiry: ${byId('purchase-quantity').value} cellular devices, ${byId('purchase-period').value} months of platform access. Estimated total incl. GST: ${byId('purchase-total').textContent}.`;
+      const summary = `Purchase enquiry: ${integer(byId('purchase-quantity').value)} cellular devices.`;
       document.dispatchEvent(new CustomEvent('wildtrkr:enquiry', { detail: summary }));
     });
   });
