@@ -10,6 +10,9 @@
     const gateways = quantity(byId('gateway-quantity').value, 1);
     const packs = quantity(byId('sensor-packs').value, 1);
     const sensors = packs * 5;
+    const isFirstOrder = byId('gateway-order-type').value === 'first';
+    const starterPacks = isFirstOrder ? Math.min(gateways,packs) : 0;
+    const starterSaving = starterPacks * 100;
     const months = Number(byId('gateway-period').value);
     if (normalize) {
       byId('gateway-quantity').value = gateways;
@@ -18,27 +21,28 @@
     const gatewayHardware = gateways * 350;
     const sensorHardware = packs * 350;
     byId('sensor-count').textContent = sensors;
-    const hardware = gatewayHardware + sensorHardware;
+    const hardware = gatewayHardware + sensorHardware - starterSaving;
     const monthly = gateways * 30;
     const subscription = monthly * months;
     const subtotal = hardware + subscription;
     const gst = subtotal * 0.1;
     const values = {
       'gateway-hardware': gatewayHardware, 'sensor-hardware': sensorHardware,
+      'gateway-starter-saving': -starterSaving,
       'gateway-upfront': hardware, 'gateway-monthly': monthly,
       'gateway-subscription': subscription, 'gateway-subtotal': subtotal,
       'gateway-gst': gst, 'gateway-total': subtotal + gst
     };
     Object.entries(values).forEach(([id, value]) => { byId(id).textContent = money.format(value); });
-    return {gateways, packs, sensors, months, hardware, monthly, total: subtotal + gst};
+    return {gateways, packs, sensors, months, hardware, monthly, total: subtotal + gst, isFirstOrder, starterPacks, starterSaving};
   }
-  ['gateway-quantity', 'sensor-packs', 'gateway-period'].forEach(id => {
+  ['gateway-order-type','gateway-quantity', 'sensor-packs', 'gateway-period'].forEach(id => {
     byId(id).addEventListener('input', () => update());
     byId(id).addEventListener('change', () => update(true));
   });
   document.querySelector('[data-gateway-quote]').addEventListener('click', () => {
     const estimate = update(true);
-    const summary = `Gateway system enquiry: ${estimate.gateways} Gateway(s), ${estimate.packs} sensor pack(s) (${estimate.sensors} sensors). Upfront hardware ${money.format(estimate.hardware)} excl. GST; monitoring ${money.format(estimate.monthly)}/month excl. GST, sensor monitoring included. Hardware plus ${estimate.months} months monitoring: ${money.format(estimate.total)} incl. GST. Configuration and freight to be confirmed.`;
+    const summary = `Gateway system enquiry (${estimate.isFirstOrder ? 'first order' : 'subsequent order'}, ${estimate.starterPacks} starter packs, ${money.format(estimate.starterSaving)} starter savings): ${estimate.gateways} Gateway(s), ${estimate.packs} sensor pack(s) (${estimate.sensors} sensors). Upfront hardware ${money.format(estimate.hardware)} excl. GST; monitoring ${money.format(estimate.monthly)}/month excl. GST, sensor monitoring included. Hardware plus ${estimate.months} months monitoring: ${money.format(estimate.total)} incl. GST. Configuration and freight to be confirmed.`;
     document.dispatchEvent(new CustomEvent('wildtrkr:enquiry', {detail: summary}));
   });
   update(true);
