@@ -13,11 +13,13 @@
     generatedSummary = summary;
   };
   document.querySelectorAll('[data-enquiry]').forEach(link => {
-    link.addEventListener('click', () => setEnquiry(link.dataset.enquiry === 'gateway'
-      ? 'Gateway enquiry: I am interested in a cellular WildTrkr Gateway and trap sensors.'
+    link.addEventListener('click', () => setEnquiry(link.dataset.enquiry === 'starter'
+      ? 'Gateway Starter Pack enquiry: $600 first-order hardware offer.'
+      : link.dataset.enquiry === 'gateway'
+        ? 'Gateway system enquiry.'
       : link.dataset.enquiry === 'rental'
         ? 'Rental enquiry: I am running a short-term trapping program and would like to discuss rental plans.'
-        : 'Walkthrough enquiry: I would like to discuss my trapping program and arrange a walkthrough.'));
+        : 'Demo enquiry: I would like to discuss my trapping program and see WildTrkr.'));
   });
   document.addEventListener('wildtrkr:enquiry', event => setEnquiry(event.detail));
   form.addEventListener('reset', () => { generatedSummary = ''; });
