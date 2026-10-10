@@ -207,6 +207,10 @@
 
         <p class="gateway-pricing-note">For clustered traps, use the separate <a href="#gateway-estimate-title">Gateway and sensor estimate below</a>.</p>
 
+<div class="gateway-starter-promo" style="margin:1.5rem 0 1.8rem;padding:clamp(1.2rem,3vw,2rem);border:2px solid #87aa90;border-radius:24px;background:linear-gradient(120deg,#e9f4e9,#fff);display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap">
+ <div style="flex:1;min-width:240px"><p class="kicker">First-order hardware special</p><h3 style="font-size:clamp(1.5rem,3vw,2.1rem);margin:.25rem 0">Gateway Starter Pack — $600 + GST</h3><p style="margin:.2rem 0 .65rem"><strong>One WildTrkr Gateway + five wireless sensors. Save $100 per pack.</strong></p><p style="margin:0;color:#435b50">Available on your first order, including multiple Starter Packs for different sites or offices. Future orders use standard hardware pricing. Gateway monitoring is $30/month + GST; freight and setup are confirmed by quote.</p></div>
+ <a class="button button-primary" data-enquiry="gateway" href="#contact">Enquire about Starter Pack</a>
+ </div>
         <div class="dual-calculators" data-calculator>
           <article class="standalone-calculator purchase-calculator">
             <div class="calculator-card-heading">
@@ -242,11 +246,10 @@
   <div class="calculator-card-heading">
     <p class="kicker">Cellular Gateway and sensors</p>
     <h3 id="gateway-estimate-title">Build a Gateway system estimate</h3>
-    <p>Starter packs are $600 each on your first order (one Gateway + five sensors, saving $100 per pack). Additional sensor packs and subsequent orders use regular hardware pricing. Monitoring is $30 per Gateway per month, including connected sensors. All prices exclude GST.</p>
+    <p>Standard pricing: $350 per Gateway and $350 per pack of five sensors. Monitoring is $30 per Gateway per month, including connected sensors. All prices exclude GST.</p>
   </div>
   <div class="calculator-controls">
-    <label for="gateway-order-type">Order type</label><select id="gateway-order-type"><option value="first">First order — starter pack offer</option><option value="repeat">Subsequent order — regular pricing</option></select>
-    <label for="gateway-quantity">Gateways</label>
+<label for="gateway-quantity">Gateways</label>
     <input id="gateway-quantity" type="number" min="1" step="1" value="1" inputmode="numeric" />
     <label for="sensor-packs">Sensor packs (5 sensors per pack)</label>
     <input id="sensor-packs" type="number" min="1" step="1" value="1" inputmode="numeric" aria-describedby="sensor-count-summary" />
@@ -256,7 +259,7 @@
   </div>
   <dl class="calculator-breakdown">
     <div><dt>Gateway hardware</dt><dd id="gateway-hardware"></dd></div>
-    <div><dt>Sensor hardware</dt><dd id="sensor-hardware"></dd></div><div><dt>First-order starter pack saving</dt><dd id="gateway-starter-saving"></dd></div>
+    <div><dt>Sensor hardware</dt><dd id="sensor-hardware"></dd></div>
     <div><dt>Upfront hardware excl. GST</dt><dd id="gateway-upfront"></dd></div>
     <div><dt>Monitoring per month excl. GST</dt><dd id="gateway-monthly"></dd></div>
     <div><dt>Subscription for selected period</dt><dd id="gateway-subscription"></dd></div>
@@ -268,7 +271,7 @@
     <p>Designed for groups of nearby traps. Gateway coverage varies with vegetation, terrain and placement. Talk to us about your trap layout so we can recommend a suitable setup.</p>
     <p class="gateway-capacity-note">Calculator quantities are for pricing and don’t confirm coverage or sensor capacity.</p>
   </div>
-  <p class="offer-note">First-order savings apply to each matched Gateway and five-sensor pack on the initial order; extra packs and later orders are full price. Final configuration and freight are confirmed with your quote.</p>
+  <p class="offer-note">This calculator always uses standard hardware pricing. The separate first-order Starter Pack offer is available by enquiry. Final configuration and freight are confirmed with your quote.</p>
   <a class="button button-primary option-action" href="#contact" data-gateway-quote>Request a Gateway system quote</a>
 </article>
 
