@@ -38,7 +38,7 @@
   });
   document.querySelector('[data-gateway-quote]').addEventListener('click', () => {
     const estimate = update(true);
-    const summary = `Gateway system enquiry: ${estimate.gateways} Gateway(s), ${estimate.packs} sensor pack(s) (${estimate.sensors} sensors). Upfront hardware ${money.format(estimate.hardware)} excl. GST; monitoring ${money.format(estimate.monthly)}/month excl. GST, sensor monitoring included. Hardware plus ${estimate.months} months monitoring: ${money.format(estimate.total)} incl. GST. Configuration and freight to be confirmed.`;
+    const summary = 'Gateway system enquiry.';
     document.dispatchEvent(new CustomEvent('wildtrkr:enquiry', {detail: summary}));
   });
   update(true);
