@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="product.css" />
   <style>
+.manual-trap-section{background:#f3f7f2;padding:clamp(3rem,6vw,6rem) 0}.manual-trap-intro{max-width:780px;margin-bottom:2.25rem}.manual-trap-intro>p:last-child{font-size:1.12rem;line-height:1.75;color:#42554a}.manual-trap-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.manual-trap-tile{border:1px solid #d9e5da;border-radius:20px;padding:1.55rem;background:#fff;box-shadow:0 10px 22px rgba(25,50,37,.035)}.manual-trap-tile h3{font-size:1.16rem;margin:.5rem 0}.manual-trap-tile p{color:#526157;line-height:1.65;margin:0}.manual-trap-number{font-size:.78rem;letter-spacing:.13em;font-weight:800;color:#4e8975}.manual-trap-bottom{margin-top:1.25rem;padding:1.8rem 2rem;border-radius:20px;background:#e5eee6;display:flex;align-items:center;justify-content:space-between;gap:2rem}.manual-trap-bottom h3{margin:0 0 .45rem}.manual-trap-bottom p{margin:0;max-width:720px;line-height:1.6}.manual-trap-bottom .button{flex-shrink:0}@media(max-width:950px){.manual-trap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.manual-trap-bottom{flex-direction:column;align-items:flex-start}}@media(max-width:580px){.manual-trap-grid{grid-template-columns:1fr}.manual-trap-bottom{padding:1.3rem}.manual-trap-intro>p:last-child{font-size:1rem}}
+
     .action-workflow-gallery{display:grid;gap:.9rem}.workflow-proof-figure{border:1px solid rgba(216,222,214,.95);border-radius:26px;background:#fff;box-shadow:0 22px 58px rgba(23,40,36,.1);margin:0;overflow:hidden;padding:.65rem}.workflow-proof-figure.primary{border-color:rgba(243,95,123,.55)}.workflow-proof-figure.blue-proof{border-color:rgba(59,130,246,.4)}.workflow-proof-figure img{display:block;width:100%;height:auto;border-radius:20px}.workflow-proof-figure figcaption{color:var(--ink-700);font-size:.78rem;font-weight:900;padding:.55rem .55rem .1rem}.trust-strip-mini{padding:2.2rem 0}.trust-strip-mini .trust-panel-mini{align-items:center;background:linear-gradient(135deg,#fff,#eef5f0);border:1px solid var(--line);border-radius:26px;box-shadow:0 16px 42px rgba(23,40,36,.08);display:grid;gap:1.2rem;grid-template-columns:1fr auto;padding:1.2rem 1.4rem}.trust-panel-mini h2{font-family:Manrope,sans-serif;font-size:1.35rem;letter-spacing:-.03em;margin:.25rem 0}.trust-panel-mini p{color:var(--ink-700);margin:0;max-width:760px}.trust-pills{display:flex;flex-wrap:wrap;gap:.55rem}.trust-pills span{background:#fff;border:1px solid var(--line);border-radius:999px;font-weight:900;padding:.55rem .75rem;white-space:nowrap}@media (max-width:800px){.trust-strip-mini .trust-panel-mini{grid-template-columns:1fr}}@media (max-width:640px){.workflow-proof-figure{border-radius:24px;padding:.4rem}.workflow-proof-figure img{border-radius:18px}}
   </style>
   <script src="calculator.js?v=5" defer></script>
@@ -32,7 +34,7 @@
       </a>
       <nav aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="#platform">Platform</a></li>
+          <li><a href="#platform">Platform</a></li><li><a href="#manual-trapping">Manual Traps</a></li>
           <li><a href="#programs">Programs</a></li>
           <li><a href="#fit">Fit</a></li>
           <li><a href="/devices">Devices</a></li>
@@ -48,12 +50,12 @@
     <section class="product-hero hero-real-platform">
       <div class="container">
         <div class="hero-headline-block">
-          <p class="kicker">Remote trap monitoring &amp; field operations</p>
-          <h1>Your teams.<br />Clear responsibility.<br />Connected programs.</h1>
-          <p class="hero-copy">See trap activations as they happen, coordinate accountable field responses, and maintain clear records across your teams and Programs—all in one platform.</p>
+          <p class="kicker">One platform for manual and monitored traps</p>
+          <h1>Every trap.<br />Every field team.<br />One connected program.</h1>
+          <p class="hero-copy">Manage conventional and electronically monitored traps side by side. Record inspections and captures, assign field teams and track program activity—all in one platform.</p>
           <div class="cta-row">
             <a class="button button-primary" data-enquiry="demo" href="#contact">Book a demo</a>
-            <a class="button button-secondary" href="#overview">Watch WildTrkr in Action</a>
+            <a class="button button-secondary" href="#manual-trapping">Explore manual trap management</a>
           </div>
         </div>
 
@@ -64,11 +66,25 @@
       </div>
     </section>
 
+    <section id="manual-trapping" class="product-section manual-trap-section" aria-labelledby="manual-trap-heading">
+      <div class="container">
+        <div class="manual-trap-intro"><p class="kicker">Manual trap management</p><h2 id="manual-trap-heading">Your existing traps. Now part of the picture.</h2>
+          <p>Not every trap needs a monitoring device. WildTrkr lets field teams record and manage routine trapping activity digitally, then combine those records with electronically monitored traps in the same program.</p></div>
+        <div class="manual-trap-grid">
+          <article class="manual-trap-tile"><span class="manual-trap-number">01</span><h3>Register &amp; locate traps</h3><p>Keep a shared record of trap locations and assignments so your team knows which equipment belongs to each program.</p></article>
+          <article class="manual-trap-tile"><span class="manual-trap-number">02</span><h3>Record field inspections</h3><p>Log trap checks and interactions, including the outcome of each visit, directly against the trap.</p></article>
+          <article class="manual-trap-tile"><span class="manual-trap-number">03</span><h3>Capture &amp; activity history</h3><p>Maintain capture details, species information and photographs in a consistent field record.</p></article>
+          <article class="manual-trap-tile"><span class="manual-trap-number">04</span><h3>Manage teams &amp; programs</h3><p>Allocate responsibilities and review trapping activity across different sites, programs and field teams.</p></article>
+        </div>
+        <div class="manual-trap-bottom"><div><h3>Start with the traps you already own.</h3><p>Use WildTrkr for manual trapping alone, or introduce wireless sensors and cellular monitors wherever they add value. No monitoring hardware is needed to manage manual traps.</p></div><a class="button button-primary" data-enquiry="manual-trapping" href="#contact">Discuss manual trap management</a></div>
+      </div>
+    </section>
+
     <section id="overview" class="product-section overview-section" aria-labelledby="overview-title">
       <div class="container">
         <p class="kicker">See WildTrkr in action</p>
-        <h2 id="overview-title">From trap activation to recorded outcomes.</h2>
-        <p class="overview-intro">A one-minute look at device monitoring, team allocation, capture recording and reporting.</p>
+        <h2 id="overview-title">From field activity to recorded outcomes.</h2>
+        <p class="overview-intro">A one-minute look at device monitoring, team allocation, capture recording and reporting. Manual trap management is available alongside monitored devices.</p>
         <video class="overview-video" controls playsinline preload="metadata" poster="/assets/wildtrkr-overview-poster.jpg" width="1920" height="1080" aria-label="WildTrkr platform overview">
           <source src="/assets/wildtrkr-overview.mp4" type="video/mp4" />
           <track kind="captions" src="/assets/wildtrkr-overview.vtt" srclang="en" label="English" />
@@ -86,7 +102,7 @@
 
     <section id="workflow" class="product-section soft" aria-labelledby="outcome-title">
       <div class="container feature-screen-grid reverse">
-        <div class="section-copy"><p class="kicker">Field outcome recording</p><h2 id="outcome-title">Keep the response connected to the work.</h2><p>Record a catch or a no-capture outcome against the device. Accidental triggers are recorded separately as false activations.</p><p class="outcome-emphasis">A field response becomes a record the team can review.</p></div>
+        <div class="section-copy"><p class="kicker">Field outcome recording</p><h2 id="outcome-title">Keep the response connected to the work.</h2><p>Record captures, no-capture outcomes and field activity against traps. For monitored traps, accidental triggers can also be recorded separately.</p><p class="outcome-emphasis">A field response becomes a record the team can review.</p></div>
         <figure class="story-screen"><img src="/assets/catch-demo.png" alt="Actual Record Catch demonstration screen for WT0502, with responsible operator, job reference and outcome details" loading="lazy" /><figcaption>Actual Record Catch screen · Demonstration data, shown from a manager session. <a class="proof-open" href="/assets/catch-demo.png">View full-size demonstration screen</a></figcaption></figure>
       </div>
     </section>
@@ -104,7 +120,7 @@
       <div class="container">
         <div class="story-heading"><p class="kicker">Management reporting</p><h2 id="report-title">Make the field records useful.</h2><p>Use capture outcomes, response activity and program summaries to support management decisions.</p></div>
         <figure class="story-screen report-catalogue" tabindex="0" aria-label="Demonstration report catalogue; scroll horizontally on small screens"><img src="/assets/report-catalogue-demo.png" alt="Actual WildTrkr report catalogue showing Capture Summary, Trial Activity and Capture Detail, Response Time, Customer and Program Summary and other reports" loading="lazy" /><figcaption>Actual WildTrkr report catalogue · Demonstration account. Report selection shown, not a populated report. <a class="proof-open" href="/assets/report-catalogue-demo.png">View full-size demonstration screen</a></figcaption></figure>
-        <div class="report-next"><p>See how responsibility, field response and reporting fit your trapping work.</p><a class="button button-primary" data-enquiry="demo" href="#contact">Book a demo</a></div>
+        <div class="report-next"><p>See how manual and monitored traps, field responsibility and reporting fit your trapping work.</p><a class="button button-primary" data-enquiry="demo" href="#contact">Book a demo</a></div>
       </div>
     </section>
 
@@ -160,7 +176,7 @@
         <div class="story-heading">
           <p class="kicker">90-day field trial</p>
           <h2 id="field-trial-title">Prove WildTrkr in your own field program.</h2>
-          <p>Evaluate the platform with your own team, traps and field conditions before committing to a broader deployment.</p>
+          <p>Evaluate monitored devices in your own field conditions before a larger deployment. Manual trap management is available without monitoring hardware.</p>
         </div>
         <div class="fit-cards">
           <article><h3>5 monitoring devices</h3><p>A controlled starting point large enough to test real field workflows.</p></article>
@@ -270,7 +286,7 @@
         <div>
           <p class="kicker">Start the conversation</p>
           <h2>Discuss your trapping setup</h2>
-          <p class="form-intro">Tell us what you need: a demo, devices or a Gateway and sensor system. We will get in touch to discuss your setup and the next step.</p>
+          <p class="form-intro">Tell us what you need: manual trap management, a demo, monitoring devices or a Gateway and sensor system. We will get in touch to discuss your setup and the next step.</p>
         </div>
         <form class="contact-form" action="/api/contact" method="post">
           <label for="name">Name</label>
