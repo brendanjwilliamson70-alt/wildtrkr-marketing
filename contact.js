@@ -19,6 +19,7 @@
     'manual-trapping': 'Manual trapping enquiry: I would like a software-only demonstration and pricing for managing our existing traps.',
     'site-visits': 'Field operations enquiry: I would like to see field-day records, site-visit times and management reporting, and confirm availability.',
     trial: 'Cellular field trial enquiry: five devices for 90 days at $600 + GST. Please confirm hardware ownership, return and post-trial subscription terms.',
+    'demo-access': '14-day demo access enquiry: I would like an individual read-only login to explore the Granite Plains demonstration account.',
     demo: 'Demo enquiry: I would like to discuss my field program and see WildTrkr.'
   };
   document.querySelectorAll('[data-enquiry]').forEach(link => {
