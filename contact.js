@@ -12,14 +12,17 @@
     message.value = summary + '\n\n' + previous;
     generatedSummary = summary;
   };
+  const enquirySummaries = {
+    starter: 'Gateway Starter Pack enquiry: $600 + GST first-order hardware offer, plus gateway monitoring.',
+    gateway: 'Gateway system enquiry.',
+    rental: 'Rental enquiry: I am running a short-term trapping program and would like to discuss rental plans.',
+    'manual-trapping': 'Manual trapping enquiry: I would like a software-only demonstration and pricing for managing our existing traps.',
+    'site-visits': 'Field operations enquiry: I would like to see field-day records, site-visit times and management reporting, and confirm availability.',
+    trial: 'Cellular field trial enquiry: five devices for 90 days at $600 + GST. Please confirm hardware ownership, return and post-trial subscription terms.',
+    demo: 'Demo enquiry: I would like to discuss my field program and see WildTrkr.'
+  };
   document.querySelectorAll('[data-enquiry]').forEach(link => {
-    link.addEventListener('click', () => setEnquiry(link.dataset.enquiry === 'starter'
-      ? 'Gateway Starter Pack enquiry: $600 first-order hardware offer.'
-      : link.dataset.enquiry === 'gateway'
-        ? 'Gateway system enquiry.'
-      : link.dataset.enquiry === 'rental'
-        ? 'Rental enquiry: I am running a short-term trapping program and would like to discuss rental plans.'
-        : 'Demo enquiry: I would like to discuss my trapping program and see WildTrkr.'));
+    link.addEventListener('click', () => setEnquiry(enquirySummaries[link.dataset.enquiry] || enquirySummaries.demo));
   });
   document.addEventListener('wildtrkr:enquiry', event => setEnquiry(event.detail));
   form.addEventListener('reset', () => { generatedSummary = ''; });

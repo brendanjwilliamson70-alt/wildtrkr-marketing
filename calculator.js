@@ -39,6 +39,7 @@
     byId('purchase-subtotal').textContent = money.format(subtotal);
     byId('purchase-gst').textContent = money.format(gst);
     byId('purchase-total').textContent = money.format(subtotal + gst);
+    return { quantity, months, hardware, platform, total: subtotal + gst };
   }
 
   document.querySelectorAll('[data-purchase-step]').forEach((button) => {
@@ -52,7 +53,8 @@
 
   document.querySelectorAll('[data-quote]').forEach((link) => {
     link.addEventListener('click', () => {
-      const summary = `Purchase enquiry: ${integer(byId('purchase-quantity').value)} cellular devices.`;
+      const estimate = updatePurchase();
+      const summary = `Cellular purchase enquiry: ${estimate.quantity} devices; ${estimate.months}-month budget. Hardware ${money.format(estimate.hardware)} excl. GST; platform access ${money.format(estimate.platform)} excl. GST. Estimated total ${money.format(estimate.total)} incl. GST. Please confirm final configuration and freight.`;
       document.dispatchEvent(new CustomEvent('wildtrkr:enquiry', { detail: summary }));
     });
   });
