@@ -38,8 +38,10 @@
       const data = await response.json().catch(() => { throw new Error('We could not confirm your enquiry was sent. Please try again or email contact@wildtrkr.com.'); });
       if (!response.ok) throw new Error(data.message || 'Unable to send. Please email contact@wildtrkr.com.');
       status.textContent = data.message;
+      document.dispatchEvent(new Event('wildtrkr:enquiry-sent'));
       form.reset();
     } catch (error) {
+      document.dispatchEvent(new Event('wildtrkr:enquiry-failed'));
       status.textContent = error.name === 'TimeoutError' || error instanceof TypeError
         ? 'We could not confirm your enquiry was sent. Please try again or email contact@wildtrkr.com.' : error.message;
     } finally {
